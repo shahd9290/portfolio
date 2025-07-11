@@ -25,7 +25,6 @@ export default function ModernPortfolio() {
         {name: "PostgreSQL", category: "Database"},
         {name: "MySQL", category: "Database"},
         {name: "Git", category: "Tools"},
-        {name: "Docker", category: "Tools"},
         {name: "Linux", category: "Tools"},
     ]
 
@@ -61,7 +60,7 @@ export default function ModernPortfolio() {
             <section className="py-20 px-6 bg-gradient-to-br from-slate-50 to-blue-50">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-5xl font-bold text-gray-900 mb-4">Danyal Husain Shah</h1>
-                    <p className="text-2xl text-blue-600 font-medium mb-4">Software Developer</p>
+                    <p className="text-2xl text-blue-600 font-medium mb-4">Graduate Software Developer</p>
                     <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                         Full-stack developer passionate about creating innovative web applications and teaching the next
                         generation
@@ -208,7 +207,6 @@ export default function ModernPortfolio() {
                                     <li>Managed day-to-day operations of tech camps ensuring safe and secure learning
                                         environments
                                     </li>
-                                    <li>Developed curriculum and teaching materials for various skill levels</li>
                                     <li>Mentored students in software development best practices and problem-solving
                                         techniques
                                     </li>
@@ -237,7 +235,7 @@ export default function ModernPortfolio() {
                 <section>
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">Education</h2>
                     <Card>
-                        <CardContent className="pt-6">
+                        <CardContent>
                             <div className="flex justify-between items-start">
                                 <div>
                                     <h3 className="text-lg font-semibold">BSc Computer Science [Software
