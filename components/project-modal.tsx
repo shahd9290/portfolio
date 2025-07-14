@@ -49,7 +49,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+            <DialogContent className="min-w-7xl max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
                     <div className="flex items-center gap-3 mb-2">
                         <div className="p-2 bg-blue-100 rounded-lg">
