@@ -103,7 +103,7 @@ export default function ModernPortfolio() {
                 <section>
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                        I'm a passionate software developer with expertise in full-stack web development and a strong
+                        I&apos;m a passionate software developer with expertise in full-stack web development and a strong
                         background in
                         teaching technology. I love building applications that solve real problems and sharing knowledge
                         with
