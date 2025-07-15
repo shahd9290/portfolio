@@ -62,9 +62,7 @@ export default function ModernPortfolio() {
                     <h1 className="text-5xl font-bold text-gray-900 mb-4">Danyal Husain Shah</h1>
                     <p className="text-2xl text-blue-600 font-medium mb-4">Graduate Software Developer</p>
                     <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Full-stack developer passionate about creating innovative web applications and teaching the next
-                        generation
-                        of programmers
+                        An aspiring full-stack developer aiming to create software that benefits everyone
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 text-gray-600 mb-8">
                         <div className="flex items-center gap-2">
@@ -103,13 +101,10 @@ export default function ModernPortfolio() {
                 <section>
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                        I&apos;m a passionate software developer with expertise in full-stack web development and a strong
-                        background in
-                        teaching technology. I love building applications that solve real problems and sharing knowledge
-                        with
-                        others. My experience spans from creating enterprise-level backend systems to developing
-                        interactive web
-                        applications with modern frameworks.
+                        I recently graduated from Royal Holloway, University of London with a Bachelor&apos;s degree in Computer Science.
+                        My interest is in Software Development - creating applications which can be beneficial to a variety of users over the internet.
+                        I have had previous experience with full-stack applications using a variety of modern frameworks - some of which I have taught to other students
+                        as part of their education.
                     </p>
                 </section>
 
