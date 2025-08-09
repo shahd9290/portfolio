@@ -1,13 +1,14 @@
 export const projectsData = [
   {
     id: "revision-platform",
-    title: "Competitive Revision Platform",
+    title: "Competitive Revision Website",
     description: "Full-stack web application for competitive learning with real-time features and gamification",
     longDescription:
-      "A comprehensive web application designed to make studying competitive and engaging. Built as my final year project, this platform combines modern web technologies to create an interactive learning environment. Features include real-time competitions, progress tracking, user authentication, and a responsive design that works across all devices.",
-    tech: ["Spring Boot", "Next.js", "PostgreSQL", "TailwindCSS", "JWT Authentication", "WebSocket", "Docker"],
+    "For my Final Year Project, I was tasked to created a full-stack web application in order to provide a service of my own choice. I had opted to supply a revision application, with a gamified twist as a means of ensuring that students stay engaged with their revision as opposed to becoming distracted. This led to gamifying the system, by allowing students compete with one another via a points-based system. The full leaderboard system has not yet been implemented, but is one that will be added in the future.",
+    tech: ["Spring Boot", "Next.js", "PostgreSQL", "TailwindCSS", "JWT Authentication"],
     period: "Oct 2024 - Apr 2025",
     status: "Completed",
+    grade: 89,
     category: "Web Development",
     features: [
       "Real-time competitive quizzes and challenges",
@@ -15,11 +16,9 @@ export const projectsData = [
       "Progress tracking and analytics dashboard",
       "Responsive design for mobile and desktop",
       "RESTful API with comprehensive documentation",
-      "Database optimization for high performance",
-      "Automated testing and CI/CD pipeline",
+      "Database optimization for high performance"
     ],
     challenges: [
-      "Implemented WebSocket connections for real-time features while maintaining scalability",
       "Designed efficient database schema to handle complex user relationships and scoring",
       "Built responsive UI components that work seamlessly across different screen sizes",
       "Integrated JWT authentication with refresh token mechanism for security",

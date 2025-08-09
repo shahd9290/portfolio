@@ -8,6 +8,7 @@ import {Calendar, Code, Database, ExternalLink, Github, Globe} from "lucide-reac
 import Link from "next/link"
 
 interface Project {
+    grade: number;
     id: string
     title: string
     description: string
@@ -86,6 +87,13 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                         <h3 className="text-lg font-semibold mb-2">Overview</h3>
                         <p className="text-gray-600 leading-relaxed">{project.longDescription}</p>
                     </div>
+
+                    {/* Grade */}
+                    {project.grade && (
+                    <div>
+                        <h3 className="text-lg font-semibold mb-2">Grade</h3>
+                        <p className="text-gray-600 leading-relaxed">{project.grade}</p>
+                    </div>)}
 
                     {/* Tech Stack */}
                     <div>
