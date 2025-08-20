@@ -190,7 +190,7 @@ export default function ModernPortfolio() {
                         <Card>
                             <CardHeader>
                                 <CardTitle>Virtual Tutor & Tech Camp Coordinator</CardTitle>
-                                <p className="text-gray-600">FunTech Limited • Jul 2023 - Present</p>
+                                <p className="text-gray-600">FunTech Limited • Jul 2023 - Aug 2025</p>
                             </CardHeader>
                             <CardContent>
                                 <ul className="list-disc list-inside text-gray-600 space-y-1">
