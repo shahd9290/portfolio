@@ -52,10 +52,10 @@ export const projectsData = [
   {
     id: "asset-management",
     title: "Enterprise Asset Management System",
-    description: "Backend system for tracking and managing organizational assets with REST API",
+    description: "Full-stack web application designed to manage and track assets.",
     longDescription:
-      "A robust backend system developed as part of a team project for managing organizational assets. Built with Spring Boot and Java, this system provides comprehensive asset tracking, user management, and reporting capabilities. Designed to handle enterprise-level data with high performance and reliability.",
-    tech: ["Spring Boot", "Java", "MySQL", "REST API", "JPA/Hibernate", "Maven", "JUnit"],
+      "During my second year I was part of a team responsible for developing an Assets Management Repository as part of our Small Enterprise Team Project module. My primary responsibility was focusing on the backend of the system, which included development of the assets entity and mapping it to the database.",
+    tech: ["Spring Boot", "Java", "PostgreSQL", "REST API", "JPA/Hibernate", "Gradle", "JUnit"],
     period: "Jan 2024 - Mar 2024",
     status: "Completed",
     category: "Backend",
