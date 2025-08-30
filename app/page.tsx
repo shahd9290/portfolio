@@ -7,33 +7,23 @@ import {Button} from "@/components/ui/button"
 import {Calendar, Code, Database, ExternalLink, Github, Globe, Linkedin, Mail, MapPin, Phone} from "lucide-react"
 import ProjectModal from "@/components/project-modal"
 import {projectsData} from "@/lib/projects-data"
+import {skills} from "@/lib/skills-data"
 import Link from "next/link";
 
 export default function ModernPortfolio() {
     const [selectedProject, setSelectedProject] = useState(null)
     const [isModalOpen, setIsModalOpen] = useState(false)
 
-    const skills = [
-        {name: "Python", category: "Languages"},
-        {name: "Java", category: "Languages"},
-        {name: "JavaScript", category: "Languages"},
-        {name: "SQL", category: "Languages"},
-        {name: "Next.js", category: "Frontend"},
-        {name: "React", category: "Frontend"},
-        {name: "TailwindCSS", category: "Frontend"},
-        {name: "Spring Boot", category: "Backend"},
-        {name: "PostgreSQL", category: "Database"},
-        {name: "MySQL", category: "Database"},
-        {name: "Git", category: "Tools"},
-        {name: "Linux", category: "Tools"},
-    ]
-
     const skillCategories = {
         Languages: skills.filter((s) => s.category === "Languages"),
-        Frontend: skills.filter((s) => s.category === "Frontend"),
-        Backend: skills.filter((s) => s.category === "Backend"),
+        Frameworks: skills.filter((s) => s.category === "Frameworks"),
         Database: skills.filter((s) => s.category === "Database"),
         Tools: skills.filter((s) => s.category === "Tools"),
+        OS: skills.filter((s) => s.category === "OS"),
+        Miscellaneous: skills.filter((s) => s.category === "Miscellaneous"),
+        Software: skills.filter((s) => s.category === "Software"),
+
+
     }
 
     const openProjectModal = (project: any) => {
@@ -106,6 +96,67 @@ export default function ModernPortfolio() {
                         I have had previous experience with full-stack applications using a variety of modern frameworks - some of which I have taught to other students
                         as part of their education.
                     </p>
+                </section>
+
+                {/* Experience */}
+                <section>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Professional Experience</h2>
+                    <div className="space-y-6">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Virtual Tutor & Tech Camp Coordinator</CardTitle>
+                                <p className="text-gray-600">FunTech Limited • Jul 2023 - Aug 2025</p>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>
+                                        Delivered Computer Science lessons covering Python Programming, Game
+                                        Development, and Web
+                                        Technologies
+                                    </li>
+                                    <li>Managed day-to-day operations of tech camps ensuring safe and secure learning
+                                        environments
+                                    </li>
+                                    <li>Mentored students in software development best practices and problem-solving
+                                        techniques
+                                    </li>
+                                </ul>
+                            </CardContent>
+                        </Card>
+
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Teaching Assistant</CardTitle>
+                                <p className="text-gray-600">Royal Holloway, University of London • Sep 2024 - Apr
+                                    2025</p>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-gray-600">
+                                    Supporting lecturers in computer science lab sessions, helping students with
+                                    programming assignments,
+                                    debugging code, and understanding complex software engineering concepts.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </section>
+
+                {/* Education - Simplified */}
+                <section>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Education</h2>
+                    <Card>
+                        <CardContent>
+                            <div className="flex justify-between items-start">
+                                <div>
+                                    <h3 className="text-lg font-semibold">BSc Computer Science [Software
+                                        Engineering]</h3>
+                                    <p className="text-gray-600">Royal Holloway, University of London</p>
+                                    <p className="text-sm text-gray-500">Sep 2022 - Jun 2025</p>
+                                </div>
+                                <Badge>First Class Honours</Badge>
+                            </div>
+                        </CardContent>
+                    </Card>
                 </section>
 
                 {/* Technical Skills */}
@@ -181,67 +232,6 @@ export default function ModernPortfolio() {
                             )
                         })}
                     </div>
-                </section>
-
-                {/* Experience */}
-                <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Professional Experience</h2>
-                    <div className="space-y-6">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Virtual Tutor & Tech Camp Coordinator</CardTitle>
-                                <p className="text-gray-600">FunTech Limited • Jul 2023 - Aug 2025</p>
-                            </CardHeader>
-                            <CardContent>
-                                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                                    <li>
-                                        Delivered Computer Science lessons covering Python Programming, Game
-                                        Development, and Web
-                                        Technologies
-                                    </li>
-                                    <li>Managed day-to-day operations of tech camps ensuring safe and secure learning
-                                        environments
-                                    </li>
-                                    <li>Mentored students in software development best practices and problem-solving
-                                        techniques
-                                    </li>
-                                </ul>
-                            </CardContent>
-                        </Card>
-
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Teaching Assistant</CardTitle>
-                                <p className="text-gray-600">Royal Holloway, University of London • Sep 2024 - Apr
-                                    2025</p>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-600">
-                                    Supporting lecturers in computer science lab sessions, helping students with
-                                    programming assignments,
-                                    debugging code, and understanding complex software engineering concepts.
-                                </p>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </section>
-
-                {/* Education - Simplified */}
-                <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Education</h2>
-                    <Card>
-                        <CardContent>
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <h3 className="text-lg font-semibold">BSc Computer Science [Software
-                                        Engineering]</h3>
-                                    <p className="text-gray-600">Royal Holloway, University of London</p>
-                                    <p className="text-sm text-gray-500">Sep 2022 - Jun 2025</p>
-                                </div>
-                                <Badge>First Class Honours</Badge>
-                            </div>
-                        </CardContent>
-                    </Card>
                 </section>
 
             </div>
