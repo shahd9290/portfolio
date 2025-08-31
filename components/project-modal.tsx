@@ -92,7 +92,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                     {project.grade && (
                     <div>
                         <h3 className="text-lg font-semibold mb-2">Grade</h3>
-                        <p className="text-gray-600 leading-relaxed">{project.grade}</p>
+                        <p className="text-gray-600 leading-relaxed">{project.grade}%</p>
                     </div>)}
 
                     {/* Tech Stack */}
