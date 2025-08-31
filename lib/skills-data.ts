@@ -1,19 +1,14 @@
 export const skills = [
-    // {name: "Python", category: "Languages"},
-    {name:"Microsoft Word", category: "Software"},
-    {name:"Microsoft Excel", category: "Software"},
-    {name:"Microsoft PowerPoint", category: "Software"},
-    {name:"Adobe Photoshop", category: "Software"},
-    {name:"Adobe Illustrator", category: "Software"},
-    {name:"Adobe Animate", category: "Software"},
-    {name:"Adobe Dreamweaver", category: "Software"},
-    {name:"Unreal Engine", category: "Software"},
 
     {name:"Python", category: "Languages"},
     {name:"Java", category: "Languages"},
     {name:"SQL", category: "Languages"},
+    {name:"HTML", category: "Languages"},
+    {name:"CSS", category: "Languages"},
     {name:"TypeScript", category: "Languages"},
     {name:"JavaScript", category: "Languages"},
+    {name:"C#*", category: "Languages"},
+    {name:"XAML*", category: "Languages"},
 
 
     {name:"Pygame", category: "Tools"},
@@ -29,6 +24,7 @@ export const skills = [
     {name:"Spring Boot", category: "Frameworks"},
     {name:"Next.js", category: "Frameworks"},
     {name:"React", category: "Frameworks"},
+    {name:".NET MAUI*", category: "Frameworks"},
 
 
     {name:"PostgreSQL", category: "Database"},

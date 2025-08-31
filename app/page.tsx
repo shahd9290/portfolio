@@ -21,8 +21,6 @@ export default function ModernPortfolio() {
         Tools: skills.filter((s) => s.category === "Tools"),
         OS: skills.filter((s) => s.category === "OS"),
         Miscellaneous: skills.filter((s) => s.category === "Miscellaneous"),
-        Software: skills.filter((s) => s.category === "Software"),
-
 
     }
 
@@ -172,13 +170,21 @@ export default function ModernPortfolio() {
                                     <div className="flex flex-wrap gap-2">
                                         {categorySkills.map((skill) => (
                                             <Badge key={skill.name} variant="secondary" className="px-3 py-1 text-sm">
-                                                {skill.name}
+                                                {skill.name.includes("*") ? (
+                                                    <>
+                                                        {skill.name.replace("*", "")}
+                                                        <sup>*</sup>
+                                                    </>
+                                                ) : (
+                                                    skill.name
+                                                )}
                                             </Badge>
                                         ))}
                                     </div>
                                 </CardContent>
                             </Card>
                         ))}
+                        <footer><i><sup>*</sup> - Currently Learning <br/> Skills not currently present I am willing to learn.</i></footer>
                     </div>
                 </section>
 

@@ -85,7 +85,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                     {/* Description */}
                     <div>
                         <h3 className="text-lg font-semibold mb-2">Overview</h3>
-                        <p className="text-gray-600 leading-relaxed">{project.longDescription}</p>
+                        <p className="text-gray-600 leading-relaxed whitespace-pre-line">{project.longDescription}</p>
                     </div>
 
                     {/* Grade */}
