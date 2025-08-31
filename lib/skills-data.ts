@@ -17,7 +17,7 @@ export const skills = [
     {name:"JUnit", category: "Tools"},
     {name:"LaTeX", category: "Tools"},
     {name:"TailwindCSS", category: "Tools"},
-    {name:"CI/CD", category: "Tools"},
+    {name:"CI/CD*", category: "Tools"},
     {name:"REST API", category: "Tools"},
     {name:"JSON", category: "Tools"},
 

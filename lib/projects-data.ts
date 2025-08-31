@@ -1,5 +1,25 @@
 export const projectsData = [
     {
+        id: "portfolio",
+        title: "My Portfolio",
+        description: "This website!",
+        longDescription:
+            "In order to showcase my projects, as well as having a project to maintain long-term, I chose to create this portfolio. This website will continuously be updated to showcase my favourite projects, as well as my skillset - serving as a web variant of my resume.",
+        tech: ["Next.js", "TailwindCSS"],
+        period: "Jul 2025 - Present",
+        status: "Ongoing",
+        category: "Web Development",
+        features: [
+            "CI/CD Implementation",
+            "Modal dialogues for each project."
+        ],
+        challenges: [
+            "Design of the website",
+            "CI/CD Implementation",
+            "Port Forwarding on VPS"
+        ]
+    },
+    {
         id: "revision-platform",
         title: "Competitive Revision Website",
         description: "Full-stack web application for competitive learning with real-time features and gamification",
