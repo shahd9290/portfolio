@@ -4,7 +4,7 @@ import {useState} from "react"
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
 import {Badge} from "@/components/ui/badge"
 import {Button} from "@/components/ui/button"
-import {Calendar, Code, Database, ExternalLink, Github, Globe, Linkedin, Mail, MapPin, Phone} from "lucide-react"
+import {Calendar, Code, Database, ExternalLink, Github, Globe, Linkedin, Mail, MapPin, Phone, Smartphone} from "lucide-react"
 import ProjectModal from "@/components/project-modal"
 import {projectsData} from "@/lib/projects-data"
 import {skills} from "@/lib/skills-data"
@@ -37,6 +37,8 @@ export default function ModernPortfolio() {
                 return Database
             case "Software":
                 return Code
+            case "Mobile Application":
+                return Smartphone
             default:
                 return Code
         }
@@ -129,11 +131,13 @@ export default function ModernPortfolio() {
                                     2025</p>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-gray-600">
-                                    Supporting lecturers in computer science lab sessions, helping students with
-                                    programming assignments,
-                                    debugging code, and understanding complex software engineering concepts.
-                                </p>
+                                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>
+                                        Assisted lecturers in lab sessions, providing support to students as they completed exercises relevant to various modules.
+                                    </li>
+                                    <li>Engaged in weekly meetings with students, to discuss what they had learned in their lectures and whether they were able to apply it to exercises they were provided.
+                                    </li>
+                                </ul>
                             </CardContent>
                         </Card>
                     </div>

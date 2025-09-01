@@ -4,7 +4,7 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/
 import {Badge} from "@/components/ui/badge"
 import {Button} from "@/components/ui/button"
 import {Separator} from "@/components/ui/separator"
-import {Calendar, Code, Database, ExternalLink, Github, Globe} from "lucide-react"
+import {Calendar, Code, Database, ExternalLink, Github, Globe, Smartphone} from "lucide-react"
 import Link from "next/link"
 
 interface Project {
@@ -41,6 +41,8 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                 return Database
             case "Software":
                 return Code
+            case "Mobile Application":
+                return Smartphone
             default:
                 return Code
         }

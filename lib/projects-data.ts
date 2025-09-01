@@ -1,23 +1,21 @@
 export const projectsData = [
     {
-        id: "portfolio",
-        title: "My Portfolio",
-        description: "This website!",
+        id: "mobileapp",
+        title: "Prayer Guide App",
+        description: "A comprehensive mobile guide to prayer in Islam.",
         longDescription:
-            "In order to showcase my projects, as well as having a project to maintain long-term, I chose to create this portfolio. This website will continuously be updated to showcase my favourite projects, as well as my skillset - serving as a web variant of my resume.",
-        tech: ["Next.js", "TailwindCSS"],
-        period: "Jul 2025 - Present",
+            "A mobile application designed to assist new muslims in learning how to pray. This application supports iOS and Android.\n\n Disclaimer: This project is in its early stages, and as such information is very vague.",
+        tech: [".NET MAUI", "C#", "XAML"],
+        period: "Aug 2025 - Present",
         status: "Ongoing",
-        category: "Web Development",
+        category: "Mobile Application",
         features: [
-            "CI/CD Implementation",
-            "Modal dialogues for each project."
+            "Cross-platform compatibility",
         ],
         challenges: [
-            "Design of the website",
-            "CI/CD Implementation",
-            "Port Forwarding on VPS"
-        ]
+            "Learning a new framework",
+        ],
+        // github: "https://github.com/shahd9290/prayer-guide-app.git"
     },
     {
         id: "revision-platform",
