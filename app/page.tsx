@@ -104,6 +104,19 @@ export default function ModernPortfolio() {
                     <div className="space-y-6">
                         <Card>
                             <CardHeader>
+                                <CardTitle>Junior Web Developer</CardTitle>
+                                <p className="text-gray-600">RESO Studios • Sep 2025 - Present</p>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>
+                                        Maintained the company's website, organising various components to improve usability.
+                                    </li>
+                                </ul>
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
                                 <CardTitle>Virtual Tutor & Tech Camp Coordinator</CardTitle>
                                 <p className="text-gray-600">FunTech Limited • Jul 2023 - Aug 2025</p>
                             </CardHeader>
@@ -111,14 +124,11 @@ export default function ModernPortfolio() {
                                 <ul className="list-disc list-inside text-gray-600 space-y-1">
                                     <li>
                                         Delivered Computer Science lessons covering Python Programming, Game
-                                        Development, and Web
-                                        Technologies
+                                        Development, and Web Technologies
                                     </li>
-                                    <li>Managed day-to-day operations of tech camps ensuring safe and secure learning
-                                        environments
+                                    <li>Managed day-to-day operations of tech camps ensuring safe and secure learning environments
                                     </li>
-                                    <li>Mentored students in software development best practices and problem-solving
-                                        techniques
+                                    <li>Mentored students in software development best practices and problem-solving techniques
                                     </li>
                                 </ul>
                             </CardContent>
