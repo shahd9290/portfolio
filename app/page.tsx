@@ -9,6 +9,7 @@ import ProjectModal from "@/components/project-modal"
 import {projectsData} from "@/lib/projects-data"
 import {skills} from "@/lib/skills-data"
 import Link from "next/link";
+import {ModeToggle} from "@/components/dark-toggle";
 
 export default function ModernPortfolio() {
     const [selectedProject, setSelectedProject] = useState(null)
@@ -257,6 +258,7 @@ export default function ModernPortfolio() {
             </div>
 
             <ProjectModal project={selectedProject} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
+            <ModeToggle/>
         </div>
     )
 }
