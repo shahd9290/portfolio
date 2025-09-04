@@ -52,7 +52,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="min-w-1/2 max-h-[90vh] overflow-y-auto">
+            <DialogContent className="min-w-1/2 max-h-[90vh] overflow-y-auto dark:bg-[#1a1c1e]">
                 <DialogHeader>
                     <div className="flex items-center gap-3 mb-2">
                         <div className="p-2 bg-blue-100 rounded-lg">
@@ -87,14 +87,14 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                     {/* Description */}
                     <div>
                         <h3 className="text-lg font-semibold mb-2">Overview</h3>
-                        <p className="text-gray-600 leading-relaxed whitespace-pre-line">{project.longDescription}</p>
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line">{project.longDescription}</p>
                     </div>
 
                     {/* Grade */}
                     {project.grade && (
                     <div>
                         <h3 className="text-lg font-semibold mb-2">Grade</h3>
-                        <p className="text-gray-600 leading-relaxed">{project.grade}%</p>
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{project.grade}%</p>
                     </div>)}
 
                     {/* Tech Stack */}
@@ -116,7 +116,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                             {project.features.map((feature, index) => (
                                 <li key={index} className="flex items-start gap-2">
                                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                                    <span className="text-gray-600">{feature}</span>
+                                    <span className="text-gray-600 dark:text-gray-400">{feature}</span>
                                 </li>
                             ))}
                         </ul>
@@ -129,7 +129,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                             {project.challenges.map((challenge, index) => (
                                 <li key={index} className="flex items-start gap-2">
                                     <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                                    <span className="text-gray-600">{challenge}</span>
+                                    <span className="text-gray-600 dark:text-gray-400">{challenge}</span>
                                 </li>
                             ))}
                         </ul>
@@ -140,7 +140,7 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                     {/* Action Buttons */}
                     <div className="flex gap-4">
                         {project.github && (
-                            <Button className="flex items-center gap-2" asChild>
+                            <Button className="flex items-center gap-2 dark:bg-gray-950 dark:text-slate-200 dark:border dark:border-gray-500" asChild>
                                 <Link href={project.github}>
                                     <Github className="w-4 h-4"/>
                                     View Code

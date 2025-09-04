@@ -46,23 +46,23 @@ export default function ModernPortfolio() {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white dark:bg-[#1a1c1e]">
             {/* Hero Section */}
-            <section className="py-20 px-6 bg-gradient-to-br from-slate-50 to-blue-50">
+            <section className="py-20 px-6 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-[#1a1c1e] dark:to-gray-900">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h1 className="text-5xl font-bold text-gray-900 mb-4">Danyal Husain Shah</h1>
+                    <h1 className="text-5xl font-bold text-gray-900 dark:text-slate-200 mb-4">Danyal Husain Shah</h1>
                     <p className="text-2xl text-blue-600 font-medium mb-4">Graduate Software Developer</p>
-                    <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
                         An aspiring full-stack developer aiming to create software that benefits everyone
                     </p>
-                    <div className="flex flex-wrap justify-center gap-4 text-gray-600 mb-8">
+                    <div className="flex flex-wrap justify-center gap-4 text-gray-600 dark:text-gray-400 mb-8">
                         <div className="flex items-center gap-2">
                             <Mail className="w-4 h-4"/>
                             <span>shahd9290@gmail.com</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Phone className="w-4 h-4"/>
-                            <span>07763685539</span>
+                            <span>07763 685539</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4"/>
@@ -70,14 +70,14 @@ export default function ModernPortfolio() {
                         </div>
                     </div>
                     <div className="flex justify-center gap-4">
-                        <Button className="flex items-center gap-2" asChild>
+                        <Button className="flex items-center gap-2 dark:bg-gray-950 dark:text-slate-200 dark:border dark:border-gray-500" asChild>
 
                             <Link href="https://github.com/shahd9290">
                                 <Github className="w-4 h-4"/>
                                 GitHub
                             </Link>
                         </Button>
-                        <Button variant="outline" className="flex items-center gap-2 bg-transparent" asChild>
+                        <Button variant="outline" className="flex items-center gap-2" asChild>
                             <Link href="https://www.linkedin.com/in/danyal-shah/">
                                 <Linkedin className="w-4 h-4"/>
                                 LinkedIn
@@ -90,8 +90,8 @@ export default function ModernPortfolio() {
             <div className="max-w-6xl mx-auto px-6 py-12 space-y-16">
                 {/* About */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">About Me</h2>
+                    <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                         I recently graduated from Royal Holloway, University of London with a Bachelor&apos;s degree in Computer Science.
                         My interest is in Software Development - creating applications which can be beneficial to a variety of users over the internet.
                         I have had previous experience with full-stack applications using a variety of modern frameworks - some of which I have taught to other students
@@ -101,15 +101,15 @@ export default function ModernPortfolio() {
 
                 {/* Experience */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Professional Experience</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">Professional Experience</h2>
                     <div className="space-y-6">
                         <Card>
                             <CardHeader>
                                 <CardTitle>Junior Web Developer</CardTitle>
-                                <p className="text-gray-600">RESO Studios • Sep 2025 - Present</p>
+                                <p className="text-gray-600 dark:text-gray-400">RESO Studios • Sep 2025 - Present</p>
                             </CardHeader>
                             <CardContent>
-                                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                                <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                                     <li>
                                         Maintained the company's website, organising various components to improve usability.
                                     </li>
@@ -119,10 +119,10 @@ export default function ModernPortfolio() {
                         <Card>
                             <CardHeader>
                                 <CardTitle>Virtual Tutor & Tech Camp Coordinator</CardTitle>
-                                <p className="text-gray-600">FunTech Limited • Jul 2023 - Aug 2025</p>
+                                <p className="text-gray-600 dark:text-gray-400">FunTech Limited • Jul 2023 - Aug 2025</p>
                             </CardHeader>
                             <CardContent>
-                                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                                <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                                     <li>
                                         Delivered Computer Science lessons covering Python Programming, Game
                                         Development, and Web Technologies
@@ -138,11 +138,11 @@ export default function ModernPortfolio() {
                         <Card>
                             <CardHeader>
                                 <CardTitle>Teaching Assistant</CardTitle>
-                                <p className="text-gray-600">Royal Holloway, University of London • Sep 2024 - Apr
+                                <p className="text-gray-600 dark:text-gray-400">Royal Holloway, University of London • Sep 2024 - Apr
                                     2025</p>
                             </CardHeader>
                             <CardContent>
-                                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                                <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                                     <li>
                                         Assisted lecturers in lab sessions, providing support to students as they completed exercises relevant to various modules.
                                     </li>
@@ -156,17 +156,17 @@ export default function ModernPortfolio() {
 
                 {/* Education - Simplified */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Education</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">Education</h2>
                     <Card>
                         <CardContent>
                             <div className="flex justify-between items-start">
                                 <div>
                                     <h3 className="text-lg font-semibold">BSc Computer Science [Software
                                         Engineering]</h3>
-                                    <p className="text-gray-600">Royal Holloway, University of London</p>
-                                    <p className="text-sm text-gray-500">Sep 2022 - Jun 2025</p>
+                                    <p className="text-gray-600 dark:text-gray-400">Royal Holloway, University of London</p>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400">Sep 2022 - Jun 2025</p>
                                 </div>
-                                <Badge>First Class Honours</Badge>
+                                <Badge variant="secondary">First Class Honours</Badge>
                             </div>
                         </CardContent>
                     </Card>
@@ -174,7 +174,7 @@ export default function ModernPortfolio() {
 
                 {/* Technical Skills */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Skills</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">Technical Skills</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {Object.entries(skillCategories).map(([category, categorySkills]) => (
                             <Card key={category} className="hover:shadow-lg transition-shadow">
@@ -205,7 +205,7 @@ export default function ModernPortfolio() {
 
                 {/* Featured Projects */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Featured Projects</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">Featured Projects</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {projectsData.slice(0, 6).map((project) => {
                             const CategoryIcon = getCategoryIcon(project.category)
@@ -231,7 +231,7 @@ export default function ModernPortfolio() {
                                         </div>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-gray-600 mb-4 text-sm">{project.description}</p>
+                                        <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">{project.description}</p>
                                         <div className="flex flex-wrap gap-1 mb-4">
                                             {project.tech.slice(0, 3).map((tech) => (
                                                 <Badge key={tech} variant="outline" className="text-xs">
