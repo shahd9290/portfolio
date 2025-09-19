@@ -28,6 +28,7 @@ export const skills = [
     {name:"Next.js", category: "Frameworks"},
     {name:"React", category: "Frameworks"},
     {name:".NET MAUI*", category: "Frameworks"},
+    {name:"NodeJS", category: "Frameworks"},
 
 
     {name:"PostgreSQL", category: "Database"},
