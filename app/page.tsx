@@ -256,7 +256,7 @@ export default function ModernPortfolio() {
                                     <CardContent>
                                         <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">{project.description}</p>
                                         <div className="flex flex-wrap gap-1 mb-4">
-                                            {project.tech.slice(0, 3).map((tech) => (
+                                            {project.tech.slice(0, 3).map((tech:string) => (
                                                 <Badge key={tech} variant="outline" className="text-xs">
                                                     {tech}
                                                 </Badge>
