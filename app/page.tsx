@@ -1,19 +1,42 @@
 "use client"
 
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
 import {Badge} from "@/components/ui/badge"
 import {Button} from "@/components/ui/button"
 import {Calendar, Code, Database, ExternalLink, Github, Globe, Linkedin, Mail, MapPin, Phone, Smartphone} from "lucide-react"
 import ProjectModal from "@/components/project-modal"
-import {projectsData} from "@/lib/projects-data"
-import {skills} from "@/lib/skills-data"
 import Link from "next/link";
 import {ModeToggle} from "@/components/dark-toggle";
+import axios from "axios";
 
 export default function ModernPortfolio() {
     const [selectedProject, setSelectedProject] = useState(null)
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [skills, setSkills] = useState<any[]>([])
+    const [projectsData, setProjectsData] = useState<any[]>([])
+
+    useEffect(() => {
+        const fetchSkills = async () => {
+            try {
+                const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/skill`)
+                setSkills(res.data)
+            } catch (err) {
+                console.error("Failed to fetch skills", err)
+            }
+        }
+        const fetchProjects = async () => {
+            try {
+                const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/project`)
+                setProjectsData(res.data)
+            } catch (err) {
+                console.error("Failed to fetch projects", err)
+            }
+        }
+        fetchSkills()
+        fetchProjects()
+
+    }, [])
 
     const skillCategories = {
         Languages: skills.filter((s) => s.category === "Languages"),
@@ -211,7 +234,7 @@ export default function ModernPortfolio() {
                             const CategoryIcon = getCategoryIcon(project.category)
                             return (
                                 <Card
-                                    key={project.id}
+                                    key={project._id}
                                     className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                                     onClick={() => openProjectModal(project)}
                                 >
