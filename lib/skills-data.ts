@@ -20,6 +20,9 @@ export const skills = [
     {name:"CI/CD*", category: "Tools"},
     {name:"REST API", category: "Tools"},
     {name:"JSON", category: "Tools"},
+    {name:"AWS*", category: "Tools"},
+    {name:"Docker*", category: "Tools"},
+
 
     {name:"Spring Boot", category: "Frameworks"},
     {name:"Next.js", category: "Frameworks"},
