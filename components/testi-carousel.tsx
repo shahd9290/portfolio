@@ -95,7 +95,7 @@ export default function TestiCarousel({testimonials}:TestiCarouselProps){
                 })}
             </CarouselContent>
             <CarouselPrevious/>
-            <CarouselNext/>g
+            <CarouselNext/>
         </Carousel>
     )
 }
