@@ -4,17 +4,34 @@ import {useEffect, useState} from "react"
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card"
 import {Badge} from "@/components/ui/badge"
 import {Button} from "@/components/ui/button"
-import {Calendar, Code, Database, ExternalLink, Github, Globe, Linkedin, Mail, MapPin, Phone, Smartphone} from "lucide-react"
+import {
+    Calendar,
+    Code,
+    Database,
+    ExternalLink,
+    Github,
+    Globe,
+    Linkedin,
+    Mail,
+    MapPin,
+    Phone, Quote,
+    Smartphone
+} from "lucide-react"
 import ProjectModal from "@/components/project-modal"
 import Link from "next/link";
 import {ModeToggle} from "@/components/dark-toggle";
 import axios from "axios";
+import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import TestiCarousel from "@/components/testi-carousel";
 
 export default function ModernPortfolio() {
     const [selectedProject, setSelectedProject] = useState(null)
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [skills, setSkills] = useState<any[]>([])
     const [projectsData, setProjectsData] = useState<any[]>([])
+    const [testimonials, setTestimonials] = useState<any[]>([])
+
 
     useEffect(() => {
         const fetchSkills = async () => {
@@ -33,8 +50,17 @@ export default function ModernPortfolio() {
                 console.error("Failed to fetch projects", err)
             }
         }
+        const fetchTestimonials = async () => {
+            try {
+                const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/testimonial`)
+                setTestimonials(res.data)
+            } catch (e) {
+                console.error("Failed to fetch testimonials", e)
+            }
+        }
         fetchSkills()
         fetchProjects()
+        fetchTestimonials()
 
     }, [])
 
@@ -71,7 +97,8 @@ export default function ModernPortfolio() {
     return (
         <div className="min-h-screen bg-white dark:bg-[#1a1c1e]">
             {/* Hero Section */}
-            <section className="py-20 px-6 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-[#1a1c1e] dark:to-gray-900">
+            <section
+                className="py-20 px-6 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-[#1a1c1e] dark:to-gray-900">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-5xl font-bold text-gray-900 dark:text-slate-200 mb-4">Danyal Husain Shah</h1>
                     <p className="text-2xl text-blue-600 font-medium mb-4">Graduate Software Developer</p>
@@ -93,7 +120,9 @@ export default function ModernPortfolio() {
                         </div>
                     </div>
                     <div className="flex justify-center gap-4">
-                        <Button className="flex items-center gap-2 dark:bg-gray-950 dark:text-slate-200 dark:border dark:border-gray-500" asChild>
+                        <Button
+                            className="flex items-center gap-2 dark:bg-gray-950 dark:text-slate-200 dark:border dark:border-gray-500"
+                            asChild>
 
                             <Link href="https://github.com/shahd9290">
                                 <Github className="w-4 h-4"/>
@@ -115,16 +144,20 @@ export default function ModernPortfolio() {
                 <section>
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">About Me</h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                        I recently graduated from Royal Holloway, University of London with a Bachelor&apos;s degree in Computer Science.
-                        My interest is in Software Development - creating applications which can be beneficial to a variety of users over the internet.
-                        I have had previous experience with full-stack applications using a variety of modern frameworks - some of which I have taught to other students
+                        I recently graduated from Royal Holloway, University of London with a Bachelor&apos;s degree in
+                        Computer Science.
+                        My interest is in Software Development - creating applications which can be beneficial to a
+                        variety of users over the internet.
+                        I have had previous experience with full-stack applications using a variety of modern frameworks
+                        - some of which I have taught to other students
                         as part of their education.
                     </p>
                 </section>
 
                 {/* Experience */}
                 <section>
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">Professional Experience</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">Professional
+                        Experience</h2>
                     <div className="space-y-6">
                         <Card>
                             <CardHeader>
@@ -134,7 +167,8 @@ export default function ModernPortfolio() {
                             <CardContent>
                                 <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                                     <li>
-                                        Maintained the company's website, organising various components to improve usability.
+                                        Maintained the company's website, organising various components to improve
+                                        usability.
                                     </li>
                                 </ul>
                             </CardContent>
@@ -142,7 +176,8 @@ export default function ModernPortfolio() {
                         <Card>
                             <CardHeader>
                                 <CardTitle>Virtual Tutor & Tech Camp Coordinator</CardTitle>
-                                <p className="text-gray-600 dark:text-gray-400">FunTech Limited • Jul 2023 - Aug 2025</p>
+                                <p className="text-gray-600 dark:text-gray-400">FunTech Limited • Jul 2023 - Aug
+                                    2025</p>
                             </CardHeader>
                             <CardContent>
                                 <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
@@ -150,9 +185,11 @@ export default function ModernPortfolio() {
                                         Delivered Computer Science lessons covering Python Programming, Game
                                         Development, and Web Technologies
                                     </li>
-                                    <li>Managed day-to-day operations of tech camps ensuring safe and secure learning environments
+                                    <li>Managed day-to-day operations of tech camps ensuring safe and secure learning
+                                        environments
                                     </li>
-                                    <li>Mentored students in software development best practices and problem-solving techniques
+                                    <li>Mentored students in software development best practices and problem-solving
+                                        techniques
                                     </li>
                                 </ul>
                             </CardContent>
@@ -161,15 +198,19 @@ export default function ModernPortfolio() {
                         <Card>
                             <CardHeader>
                                 <CardTitle>Teaching Assistant</CardTitle>
-                                <p className="text-gray-600 dark:text-gray-400">Royal Holloway, University of London • Sep 2024 - Apr
+                                <p className="text-gray-600 dark:text-gray-400">Royal Holloway, University of London •
+                                    Sep 2024 - Apr
                                     2025</p>
                             </CardHeader>
                             <CardContent>
                                 <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                                     <li>
-                                        Assisted lecturers in lab sessions, providing support to students as they completed exercises relevant to various modules.
+                                        Assisted lecturers in lab sessions, providing support to students as they
+                                        completed exercises relevant to various modules.
                                     </li>
-                                    <li>Engaged in weekly meetings with students, to discuss what they had learned in their lectures and whether they were able to apply it to exercises they were provided.
+                                    <li>Engaged in weekly meetings with students, to discuss what they had learned in
+                                        their lectures and whether they were able to apply it to exercises they were
+                                        provided.
                                     </li>
                                 </ul>
                             </CardContent>
@@ -186,7 +227,8 @@ export default function ModernPortfolio() {
                                 <div>
                                     <h3 className="text-lg font-semibold">BSc Computer Science [Software
                                         Engineering]</h3>
-                                    <p className="text-gray-600 dark:text-gray-400">Royal Holloway, University of London</p>
+                                    <p className="text-gray-600 dark:text-gray-400">Royal Holloway, University of
+                                        London</p>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">Sep 2022 - Jun 2025</p>
                                 </div>
                                 <Badge variant="secondary">First Class Honours</Badge>
@@ -222,7 +264,8 @@ export default function ModernPortfolio() {
                                 </CardContent>
                             </Card>
                         ))}
-                        <footer><i><sup>*</sup> - Currently Learning <br/> Skills not currently present I am willing to learn.</i></footer>
+                        <footer><i><sup>*</sup> - Currently Learning <br/> Skills not currently present I am willing to
+                            learn.</i></footer>
                     </div>
                 </section>
 
@@ -276,6 +319,10 @@ export default function ModernPortfolio() {
                             )
                         })}
                     </div>
+                </section>
+                <section>
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-200 mb-6">Testimonials</h2>
+                    <TestiCarousel testimonials={testimonials} />
                 </section>
 
             </div>
