@@ -161,7 +161,7 @@ export default function ModernPortfolio() {
                     <div className="space-y-6">
                         <Card>
                             <CardHeader>
-                                <CardTitle>Junior Web Developer</CardTitle>
+                                <CardTitle>Web Development Intern</CardTitle>
                                 <p className="text-gray-600 dark:text-gray-400">RESO Studios • Sep 2025 - Present</p>
                             </CardHeader>
                             <CardContent>
