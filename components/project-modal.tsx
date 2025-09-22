@@ -148,9 +148,11 @@ export default function ProjectModal({project, isOpen, onClose}: ProjectModalPro
                             </Button>
                         )}
                         {project.demo && (
-                            <Button variant="outline" className="flex items-center gap-2 bg-transparent">
-                                <ExternalLink className="w-4 h-4"/>
-                                Live Demo
+                            <Button variant="outline" className="flex items-center gap-2 bg-transparent" asChild>
+                                <Link href={project.demo}>
+                                    <ExternalLink className="w-4 h-4"/>
+                                    Live Demo
+                                </Link>
                             </Button>
                         )}
                     </div>
